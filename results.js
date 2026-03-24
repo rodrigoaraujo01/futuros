@@ -48,7 +48,7 @@ const questions = {
       b: 'IA criando políticas e padrões',
       c: 'Monitoramento em tempo real',
       d: 'IA garantindo uso ético',
-      e: 'Governança agindo junto com as pessoas',
+      e: 'Governança como rede (políticas, papéis e responsabilidades) assessorada por IA',
     },
   },
 };

@@ -53,6 +53,7 @@ const questions = {
   },
 };
 
+
 async function loadResults() {
   const container = document.getElementById('results');
 

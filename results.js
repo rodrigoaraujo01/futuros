@@ -48,7 +48,7 @@ const questions = {
       b: 'IA criando políticas e padrões',
       c: 'Monitoramento em tempo real',
       d: 'IA garantindo uso ético',
-      e: 'Governança como rede (políticas, papéis e responsabilidades) assessorada por IA',
+      e: 'Governança como rede assessorada por IA',
     },
   },
 };
@@ -88,9 +88,12 @@ async function loadResults() {
     const qCounts = counts[q];
 
     html += `<div class="result-card ${colorClasses[q]}">`;
-    html += `<h3><span class="badge">${question.theme}</span><br><br>${question.title}</h3>`;
+    html += `<div class="card-sidebar"><span class="badge sidebar-badge">${question.theme}</span></div>`;
+    html += `<div class="card-content">`;
+    html += `<h3>${question.title}</h3>`;
 
-    for (const letter of ['a', 'b', 'c', 'd', 'e']) {
+    const sorted = ['a', 'b', 'c', 'd', 'e'].sort((x, y) => qCounts[y] - qCounts[x]);
+    for (const letter of sorted) {
       const count = qCounts[letter];
       const pct = qCounts.total > 0 ? Math.round((count / qCounts.total) * 100) : 0;
 
@@ -105,6 +108,7 @@ async function loadResults() {
     }
 
     html += `<div class="total-votes">${qCounts.total} voto${qCounts.total !== 1 ? 's' : ''}</div>`;
+    html += `</div>`;
     html += `</div>`;
   }
 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futuros – Resultados</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="results-header">
+      <h1>Resultados</h1>
+      <p>Respostas do painel em tempo real</p>
+    </div>
+
+    <div class="results-grid" id="results">
+      <p style="text-align:center; color: var(--text-light);">Carregando resultados...</p>
+    </div>
+
+    <div class="refresh-bar">
+      <button class="btn-refresh" onclick="loadResults()">Atualizar</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="results.js"></script>
+</body>
+</html>

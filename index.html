@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futuros – Painel Interativo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Futuros</h1>
+      <p class="subtitle">Nos adaptamos às mudanças ou criamos o futuro?</p>
+    </header>
+
+    <main id="app">
+      <!-- Tela inicial -->
+      <section id="welcome" class="screen active">
+        <p>Participe respondendo 4 perguntas sobre o futuro.</p>
+        <button class="btn" onclick="startQuiz()">Começar</button>
+      </section>
+
+      <!-- Pergunta 1 -->
+      <section id="q1" class="screen">
+        <div class="question-header">
+          <span class="badge">Profissional do Futuro</span>
+          <span class="step">1 / 4</span>
+        </div>
+        <h2>Das habilidades abaixo, qual será a mais importante para o profissional do futuro?</h2>
+        <div class="options">
+          <button class="option" data-q="1" data-a="a">Criatividade</button>
+          <button class="option" data-q="1" data-a="b">Resiliência</button>
+          <button class="option" data-q="1" data-a="c">Empreendedorismo</button>
+          <button class="option" data-q="1" data-a="d">Pensamento estratégico</button>
+          <button class="option" data-q="1" data-a="e">Liderança</button>
+        </div>
+      </section>
+
+      <!-- Pergunta 2 -->
+      <section id="q2" class="screen">
+        <div class="question-header">
+          <span class="badge">Transição Energética</span>
+          <span class="step">2 / 4</span>
+        </div>
+        <h2>Em 2040, quantos % do portfólio da Petrobras será referente a óleo e gás?</h2>
+        <div class="options">
+          <button class="option" data-q="2" data-a="a">10%</button>
+          <button class="option" data-q="2" data-a="b">30%</button>
+          <button class="option" data-q="2" data-a="c">50%</button>
+          <button class="option" data-q="2" data-a="d">70%</button>
+          <button class="option" data-q="2" data-a="e">90%</button>
+        </div>
+      </section>
+
+      <!-- Pergunta 3 -->
+      <section id="q3" class="screen">
+        <div class="question-header">
+          <span class="badge">IA Responsável</span>
+          <span class="step">3 / 4</span>
+        </div>
+        <h2>Qual prática de IA responsável terá maior impacto positivo na sociedade nos próximos 10 anos?</h2>
+        <div class="options">
+          <button class="option" data-q="3" data-a="a">Transparência nos algoritmos de decisão</button>
+          <button class="option" data-q="3" data-a="b">Eliminação de vieses em modelos de linguagem</button>
+          <button class="option" data-q="3" data-a="c">Regulamentação internacional unificada</button>
+          <button class="option" data-q="3" data-a="d">Auditoria contínua de sistemas autônomos</button>
+          <button class="option" data-q="3" data-a="e">Democratização do acesso a ferramentas de IA</button>
+        </div>
+      </section>
+
+      <!-- Pergunta 4 -->
+      <section id="q4" class="screen">
+        <div class="question-header">
+          <span class="badge">Governança de Dados</span>
+          <span class="step">4 / 4</span>
+        </div>
+        <h2>Qual será o papel mais transformador da IA na governança de dados nos próximos anos?</h2>
+        <div class="options">
+          <button class="option" data-q="4" data-a="a">Agentes de IA atuando como curadores de dados nas equipes</button>
+          <button class="option" data-q="4" data-a="b">IA ajudando a criar políticas e padrões de dados</button>
+          <button class="option" data-q="4" data-a="c">Monitoramento automático e em tempo real das regras de uso de dados</button>
+          <button class="option" data-q="4" data-a="d">IA garantindo que o uso de dados seja ético e responsável</button>
+          <button class="option" data-q="4" data-a="e">Governança deixando de ser só controle e passando a agir junto com as pessoas</button>
+        </div>
+      </section>
+
+      <!-- Tela de agradecimento -->
+      <section id="thanks" class="screen">
+        <h2>Obrigado por participar! 🚀</h2>
+        <p>Suas respostas foram enviadas com sucesso.</p>
+        <a href="results.html" class="btn btn-secondary">Ver resultados</a>
+      </section>
+
+      <!-- Tela de erro -->
+      <section id="error" class="screen">
+        <h2>Ops, algo deu errado 😕</h2>
+        <p>Não foi possível enviar suas respostas. Tente novamente.</p>
+        <button class="btn" onclick="retry()">Tentar novamente</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -33,11 +33,11 @@ const questions = {
     title: 'Qual prática de IA responsável terá maior impacto positivo na sociedade?',
     theme: 'IA Responsável',
     options: {
-      a: 'Transparência nos algoritmos',
-      b: 'Eliminação de vieses',
-      c: 'Regulamentação unificada',
-      d: 'Auditoria de sistemas autônomos',
-      e: 'Democratização do acesso à IA',
+      a: 'Transparência e explicabilidade dos algoritmos',
+      b: 'Redução e mitigação de vieses em sistemas de IA',
+      c: 'Regulamentação e governança de IA',
+      d: 'Avaliação de riscos de IA',
+      e: 'Avaliação de confiabilidade de sistemas de IA',
     },
   },
   4: {

@@ -4,6 +4,8 @@
 
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
+const colorClasses = { 1: 'color-blue', 2: 'color-orange', 3: 'color-green', 4: 'color-gray' };
+
 const questions = {
   1: {
     title: 'Qual será a habilidade mais importante para o profissional do futuro?',
@@ -85,7 +87,7 @@ async function loadResults() {
     const question = questions[q];
     const qCounts = counts[q];
 
-    html += `<div class="result-card">`;
+    html += `<div class="result-card ${colorClasses[q]}">`;
     html += `<h3><span class="badge">${question.theme}</span><br><br>${question.title}</h3>`;
 
     for (const letter of ['a', 'b', 'c', 'd', 'e']) {
